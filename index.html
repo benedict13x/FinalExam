@@ -1,30 +1,236 @@
 <html>
-  <head>
-    <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
-    <script src="https://rawgit.com/bryik/aframe-bmfont-text-component/master/dist/aframe-bmfont-text-component.min.js"></script>
-  </head>
+   <head>
+      <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+   <script src="https://rawgit.com/bryik/aframe-bmfont-text-component/master/dist/
+aframe-bmfont-text-component.min.js"></script>
+   </head>
+
   <body>
-    <a-scene>
-      <a-asset>
-        <a-asset-item id = "amongUs" src = "models/amongUsRed.obj"></a-asset-item>
-      </a-assets>
-      <a-entity
-        scale="5 5 5"
-        bmfont-text="text: a!; color: grey; size: 1.5; height: 0.5"
-        position=" -1 3 -7"></a-entity>
-      
-      <a-model
-        src = ""
-        scale = "1 1 1"
-        position = "0 0.35 7.6"
-        rotation = "0 90 0"
-        material = "shader: flat"></a-model>
-      
-      
+      <a-assets><img src="https://img.gs/bbdkhfbzkk/stretch/https://i.imgur.com/25P1geh.png" id="grid" crossorigin="anonymous"></a-assets>
 
-      <a-entity obj-model = "obj: #amongUs"></a-entity>
+   <a-scene>
 
-      <a-sky src = "background/bgSky.jpeg" rotation = "0 -90 0"></a-sky>
-    </a-scene>
+        <a-entity position="0 -10 0" geometry="primitive: plane; width: 10000; height: 10000;" 
+                rotation="-90 0 0" material="src: #grid;repeat: 10000 10000;transparent: true;metalness:0.6;roughness: 0.4;sphericalEnvMap: #sky;"
+      ></a-entity>
+
+
+      <a-entity scale="5 5 5" bmfont-text="text: NORMAL; color: grey;
+      size: 1.5; height: 0.5" position="-2 4 -10"></a-entity>
+      <a-entity  scale="2 2 2" 
+                 geometry="primitive: circle;" 
+                 position="0  4 -10" 
+                 material="color: #808080; 
+                 metalness:1; 
+                 roughness: 0.3; 
+                 sphericalEnvMap: 
+                 #sky;
+      "><a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360"
+      repeat="indefinite"></a-animation></a-entity>
+
+      <a-entity scale="5 5 5" bmfont-text="text: FIRE; color: white;
+      size: 1.5; height: 0.5" position="5 4 -10"></a-entity>
+       <a-entity  scale="2 2 2" 
+                  geometry="primitive: circle;" 
+                  position="5 4 -10"
+                  material="color: #FF0000; 
+                  metalness:1; 
+                  roughness: 0.3; 
+                  sphericalEnvMap: #sky;
+      "><a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360"
+      repeat="indefinite"></a-animation></a-entity>
+
+       <a-entity scale="5 5 5" bmfont-text="text: WATER; color: grey;
+      size: 1.5; height: 0.5" position="-5 4 -10"></a-entity>
+       <a-entity  scale="2 2 2" 
+                  geometry="primitive: circle;" 
+                  position="-5 4 -10"
+                  material="color: #0000FF; 
+                  metalness:1; 
+                  roughness: 0.3; 
+                  sphericalEnvMap: #sky;
+      "><a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360"
+      repeat="indefinite"></a-animation></a-entity>
+
+      <a-entity scale="5 5 5" bmfont-text="text: ELECTRIC; color: grey;
+      size: 1.5; height: 0.5" position="-10 4 -10"></a-entity>
+      <a-entity  scale="2 2 2" 
+                  geometry="primitive: circle;" 
+                  position="-10 4 -10"
+                  material="color: #FFFF00; 
+                  metalness:1; 
+                  roughness: 0.3; 
+                  sphericalEnvMap: #sky;
+      "><a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360"
+      repeat="indefinite"></a-animation></a-entity>
+
+      <a-entity scale="5 5 5" bmfont-text="text: GRASS; color: grey;
+      size: 1.5; height: 0.5" position="10 4 -10"></a-entity>
+      <a-entity  scale="2 2 2" 
+                  geometry="primitive: circle;" 
+                  position="10 4 -10"
+                  material="color: #008000; 
+                  metalness:1; 
+                  roughness: 0.3; 
+                  sphericalEnvMap: #sky;
+      "><a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360"
+      repeat="indefinite"></a-animation></a-entity>
+
+      <a-entity scale="5 5 5" bmfont-text="text: ICE; color: grey;
+      size: 1.5; height: 0.5" position="15 4 -10"></a-entity>
+      <a-entity  scale="2 2 2" 
+                  geometry="primitive: circle;" 
+                  position="15 4 -10"
+                  material="color: #00BFFF; 
+                  metalness:1; 
+                  roughness: 0.3; 
+                  sphericalEnvMap: #sky;
+      "><a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360"
+      repeat="indefinite"></a-animation></a-entity>
+
+      <a-entity scale="5 5 5" bmfont-text="text: POISON; color: grey;
+      size: 1.5; height: 0.5" position="20 4 -10"></a-entity>
+      <a-entity  scale="2 2 2" 
+                  geometry="primitive: circle;" 
+                  position="20 4 -10"
+                  material="color: #F08080; 
+                  metalness:1; 
+                  roughness: 0.3; 
+                  sphericalEnvMap: #sky;
+      "><a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360"
+      repeat="indefinite"></a-animation></a-entity>
+
+      <a-entity scale="5 5 5" bmfont-text="text: GROUND; color: grey;
+      size: 1.5; height: 0.5" position="-15 4 -10"></a-entity>
+      <a-entity  scale="2 2 2" 
+                  geometry="primitive: circle;" 
+                  position="-15 4 -10"
+                  material="color: #FF8C00; 
+                  metalness:1; 
+                  roughness: 0.3; 
+                  sphericalEnvMap: #sky;
+      "><a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360"
+      repeat="indefinite"></a-animation></a-entity>
+
+      <a-entity scale="5 5 5" bmfont-text="text: FIGHTING; color: grey;
+      size: 1.5; height: 0.5" position="0 10 -10"></a-entity>
+      <a-entity  scale="2 2 2" 
+                 geometry="primitive: circle;" 
+                 position="0  10 -10" 
+                 material="color: #FF4500; 
+                 metalness:1; 
+                 roughness: 0.3; 
+                 sphericalEnvMap: 
+                 #sky;
+      "><a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360"
+      repeat="indefinite"></a-animation></a-entity>
+
+      <a-entity scale="5 5 5" bmfont-text="text: FLYING; color: grey;
+      size: 1.5; height: 0.5" position="5 10 -10"></a-entity>
+      <a-entity  scale="2 2 2" 
+                 geometry="primitive: circle;" 
+                 position="5  10 -10" 
+                 material="color: #00FFFF; 
+                 metalness:1; 
+                 roughness: 0.3; 
+                 sphericalEnvMap: 
+                 #sky;
+      "><a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360"
+      repeat="indefinite"></a-animation></a-entity>
+
+      <a-entity scale="5 5 5" bmfont-text="text: PSYCHIC; color: grey;
+      size: 1.5; height: 0.5" position="10 10 -10"></a-entity>
+      <a-entity  scale="2 2 2" 
+                 geometry="primitive: circle;" 
+                 position="10  10 -10" 
+                 material="color: #800080; 
+                 metalness:1; 
+                 roughness: 0.3; 
+                 sphericalEnvMap: 
+                 #sky;
+      "><a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360"
+      repeat="indefinite"></a-animation></a-entity>
+
+      <a-entity scale="5 5 5" bmfont-text="text: BUG; color: grey;
+      size: 1.5; height: 0.5" position="15 10 -10"></a-entity>
+      <a-entity  scale="2 2 2" 
+                 geometry="primitive: circle;" 
+                 position="15  10 -10" 
+                 material="color: #32CD32; 
+                 metalness:1; 
+                 roughness: 0.3; 
+                 sphericalEnvMap: 
+                 #sky;
+      "><a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360"
+      repeat="indefinite"></a-animation></a-entity>
+
+      <a-entity scale="5 5 5" bmfont-text="text: ROCK; color: grey;
+      size: 1.5; height: 0.5" position="-5 10 -10"></a-entity>
+      <a-entity  scale="2 2 2" 
+                 geometry="primitive: circle;" 
+                 position="-5  10 -10" 
+                 material="color: #C0C0C0; 
+                 metalness:1; 
+                 roughness: 0.3; 
+                 sphericalEnvMap: 
+                 #sky;
+      "><a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360"
+      repeat="indefinite"></a-animation></a-entity>
+
+      <a-entity scale="5 5 5" bmfont-text="text: GHOST; color: grey;
+      size: 1.5; height: 0.5" position="-10 10 -10"></a-entity>
+      <a-entity  scale="2 2 2" 
+                 geometry="primitive: circle;" 
+                 position="-10  10 -10" 
+                 material="color: #8B0000; 
+                 metalness:1; 
+                 roughness: 0.3; 
+                 sphericalEnvMap: 
+                 #sky;
+      "><a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360"
+      repeat="indefinite"></a-animation></a-entity>
+
+      <a-entity scale="5 5 5" bmfont-text="text: DRAGON; color: grey;
+      size: 1.5; height: 0.5" position="-15 10 -10"></a-entity>
+      <a-entity  scale="2 2 2" 
+                 geometry="primitive: circle;" 
+                 position="-15  10 -10" 
+                 material="color: #FFD700; 
+                 metalness:1; 
+                 roughness: 0.3; 
+                 sphericalEnvMap: 
+                 #sky;
+      "><a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360"
+      repeat="indefinite"></a-animation></a-entity>
+
+      <a-entity scale="5 5 5" bmfont-text="text: DARK; color: grey;
+      size: 1.5; height: 0.5" position="-20 10 -10"></a-entity>
+      <a-entity  scale="2 2 2" 
+                 geometry="primitive: circle;" 
+                 position="-20  10 -10" 
+                 material="color: #000000; 
+                 metalness:1; 
+                 roughness: 0.3; 
+                 sphericalEnvMap: 
+                 #sky;
+      "><a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360"
+      repeat="indefinite"></a-animation></a-entity>
+
+      <a-entity scale="5 5 5" bmfont-text="text: STEEL; color: grey;
+      size: 1.5; height: 0.5" position="20 10 -10"></a-entity>
+      <a-entity  scale="2 2 2" 
+                 geometry="primitive: circle;" 
+                 position="20  10 -10" 
+                 material="color: #778899; 
+                 metalness:1; 
+                 roughness: 0.3; 
+                 sphericalEnvMap: 
+                 #sky;
+      "><a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360"
+      repeat="indefinite"></a-animation></a-entity>
+     
+      
+      <a-sky src="background/nyahaha.png" rotation="0 -90 0"></a-sky>
+      </a-scene>
   </body>
 </html>
