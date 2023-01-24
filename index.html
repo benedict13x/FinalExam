@@ -1,21 +1,28 @@
 <html>
   <head>
-    <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
     <script src="https://rawgit.com/bryik/aframe-bmfont-text-component/master/dist/aframe-bmfont-text-component.min.js"></script>
   </head>
   <body>
     <a-scene>
+      <a-asset>
+        <a-asset-item id = "amongUs" src = "models/amongUsRed.obj"></a-asset-item>
+      </a-assets>
       <a-entity
         scale="5 5 5"
         bmfont-text="text: a!; color: grey; size: 1.5; height: 0.5"
         position=" -1 3 -7"></a-entity>
       
       <a-model
-        src = "models/amongUsRed.obj"
+        src = ""
         scale = "1 1 1"
         position = "0 0.35 7.6"
         rotation = "0 90 0"
-        material.shader = "flat"></a-model>
+        material = "shader: flat"></a-model>
+      
+      
+
+      <a-entity obj-model = "obj: #amongUs"></a-entity>
 
       <a-sky src = "background/bgSky.jpeg" rotation = "0 -90 0"></a-sky>
     </a-scene>
